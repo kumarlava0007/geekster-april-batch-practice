@@ -1,17 +1,80 @@
-1. Write a JavaScript function that accepts two arguments, a string and a letter and the function will count the number of occurrences of the specified letter within the string. Go to the editor
-Sample arguments : 'w3resource.com', 'o'
-Expected output : 2
 
-2. Write a JavaScript function to extract unique characters from a string. Go to the editor
-Example string : "thequickbrownfoxjumpsoverthelazydog"
-Expected Output : "thequickbrownfxjmpsvlazydg"
+// 1. Write a JavaScript function that accepts two arguments, a string and a letter and the function will count the number of occurrences of the specified letter within the string. Go to the editor
+// Sample arguments : 'w3resource.com', 'o'
+// Expected output : 2
 
-3. Write a Javascript function to check if paranthesis is balanced or not
-Example string: "((()))[]"
-Expected output : true
+  //solution
+// function occurances(str, c) {
+//     let n = str.length;
+//     let count = 0;
+//     for(let i=0; i<n; i++){
+//         if(str.charAt(i) == c)
+//             count++;
+//     }
+//     return count;
+// } 
+// console.log(occurances("w3resource.com", 'o'));
 
-Example string: "((())[]"
-Expected output : false
+//..................................................................................
 
-Example string: "((({}())))"
-Expected output : true
+// 2. Write a JavaScript function to extract unique characters from a string. Go to the editor
+// Example string : "thequickbrownfoxjumpsoverthelazydog"
+// Expected Output : "thequickbrownfxjmpsvlazydg"
+
+    //solution
+// function unique(str) {
+//     let set = new Set(str);
+//     let len = set.size;
+//     let res = "";
+
+//     for (const k of set) {
+//         res +=k
+//       }
+//     return res;
+// }
+// console.log(unique("thequickbrownfoxjumpsoverthelazydog"))
+
+//..................................................................................
+
+// 3. Write a Javascript function to check if paranthesis is balanced or not
+// Example string: "((()))[]"
+// Expected output : true
+
+// Example string: "((())[]"
+// Expected output : false
+
+// Example string: "((({}())))"
+// Expected output : true
+
+//solution
+// function check(str) {
+//     let arr = [];
+//     let len = str.length;
+//     for(let i=0; i<len; i++){
+//         if(['(', '[', '{'].includes(str[i]))
+//         arr.push(str[i])
+//         else{
+//             let res = arr.pop();
+//             if(str[i] == ')'){
+//                 if(res != '(')
+//                 return false;
+//             }
+//             else if(str[i] == ']'){
+//                 if(res != '[')
+//                 return false;
+//             }
+//             else if(str[i] == '}'){
+//                 if(res != '{')
+//                 return false;
+//             }
+//         }
+//     }
+//     if(arr.length == 0)
+//     return true;
+//     else return false;
+// }
+
+// let res = check("((({}())))");
+// console.log(res);
+
+//.........................................................................................
